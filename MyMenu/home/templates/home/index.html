@@ -1,7 +1,13 @@
 {% extends "home/layout.html" %}
 
 {% block body%}
-    <h1>
-        Hello World
-    </h1>
+    <script type="text/babel">
+        function Hello() {
+            return <h5> Hello World </h5>
+        }
+
+        const container = document.getElementById("header")
+        const root = ReactDOM.createRoot(container)
+        root.render(<Hello />)
+    </script>
 {% endblock%}
