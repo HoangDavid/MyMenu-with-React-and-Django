@@ -1,0 +1,94 @@
+:root{
+    --main-color: #E77917;
+    --font-family: 'Poppins';
+    --logo-with-text: url('images/logowithtext.svg');
+    --login-icon: url('images/login.svg');
+    --search-icon: url('images/search.svg');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins-Bold.ttf) format('truetype');
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    border: solid;
+}
+
+.header {
+    position: relative;
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: var(--font-family);
+    font-size: 15px;
+}
+
+
+.header .item{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header .item .logo{
+    display:block;
+    position: relative;
+    background-image: var(--logo-with-text);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 50px;
+}
+
+.header .item .profile{
+    display:block;
+    position: relative;
+    background-image: var(--login-icon);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+}
+
+.header .item .search-icon{
+    position: absolute;
+    background-image: var(--search-icon);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#search{
+    padding-left: 25px;
+    border-radius:10px;
+    height: 25px;
+}
+
+.header .item:hover{
+    color: #E77917;
+}
+
