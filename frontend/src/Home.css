@@ -1,9 +1,9 @@
 :root{
     --main-color: #E77917;
     --font-family: 'Poppins';
-    --logo-with-text: url('images/logowithtext.svg');
-    --login-icon: url('images/login.svg');
-    --search-icon: url('images/search.svg');
+    --logo-with-text: url('images/icons/logowithtext.svg');
+    --login-icon: url('images/icons/login.svg');
+    --search-icon: url('images/icons/search.svg');
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 .container {
     position: relative;
     width: 100%;
-    border: solid;
+
 }
 
 .header {
@@ -82,6 +82,7 @@
     margin-bottom: auto;
 }
 
+
 #search{
     padding-left: 25px;
     border-radius:10px;
@@ -92,3 +93,26 @@
     color: #E77917;
 }
 
+.slider {
+    position: relative;
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2000px;
+    height: 100%;
+    text-align: center;
+    border: solid;
+
+}
+
+ .slider .slide-item{
+    position: absolute;
+ }
+
+ #card1{
+    position: relative;
+    content: url("images/slides/cute.jpeg");
+    
+ }
