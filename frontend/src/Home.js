@@ -1,8 +1,22 @@
 import './Home.css'
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 
 function Home(){
+    const [slideIndex, setIndex] = useState(1)
+    const [curSlide, setSlide] = useState(require(`./images/slides/${slideIndex}.gif`))
 
+    // TODO: call api for the number of slides
+    const length = 6
+
+    const nextSlide = () => {
+        if (slideIndex + 1  > length){
+            alert("end of slide")
+        }
+        else{
+            setIndex(slideIndex + 1)
+            setSlide(require(`./images/slides/${slideIndex}.jpg`))
+        }
+    }
 
 
     return (
@@ -23,7 +37,21 @@ function Home(){
 
             
             <div className="container">
-                <img src='images/slides/1.jpg' alt='1'/>
+                <div className='slider'>
+                    <div className='slide-item'>
+                        <div className='caption'>
+                            Make your first interative Menu today !
+                        </div>
+                        <p>
+                            Try clicking the slide <b>on the left</b> to get a glimpse on how to use it
+                        </p>
+
+                        <button>Try it out !</button>
+                    </div>
+                    <div className='slide-item'>
+                        <img src={curSlide} onClick={nextSlide}/>
+                    </div>
+                </div>
             </div>
         </span>
     )
