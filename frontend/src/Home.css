@@ -92,27 +92,3 @@
 .header .item:hover{
     color: #E77917;
 }
-
-.slider {
-    position: relative;
-    left: 0; 
-    right: 0; 
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 2000px;
-    height: 100%;
-    text-align: center;
-    border: solid;
-
-}
-
- .slider .slide-item{
-    position: absolute;
- }
-
- #card1{
-    position: relative;
-    content: url("images/slides/cute.jpeg");
-    
- }
