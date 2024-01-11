@@ -20,7 +20,7 @@ function Home(){
     }
 
 
-
+    
     return (
         <span>
             <div className="container">
@@ -71,6 +71,38 @@ function Home(){
                         <div className='display' id="display3"></div>
                         <div className='caption'>Charming</div>
                     </div>
+                </div>
+            </div>
+
+            <div className='container'>
+                <div className='faq'>
+                    <h2>FAQ</h2>
+                    <div className='item'>
+                        <div className='question'>blah blah blah blah blah blah? blah blahblah blahblah blahblah blah ?</div>
+                        <div className='answer'> blah blahblah blahblah blahblah blahblah blahblah blah</div>
+                    </div>
+                    <div className='item'>
+                        <div className='question'>blah blah blah blah blah blah? blah blahblah blahblah blahblah blah ?</div>
+                        <div className='answer'>blah blahblah blahblah blahblah blahblah blahblah blah</div>
+                    </div>
+                    <div className='item'>
+                        <div className='question'>blah blah blah blah blah blah? blah blahblah blahblah blahblah blah ?</div>
+                        <div className='answer'>blah blahblah blahblah blahblah blahblah blahblah blah</div>
+                    </div>
+                    <div className='item'>
+                        <div className='question'>blah blah blah blah blah blah? blah blahblah blahblah blahblah blah ?</div>
+                        <div className='answer'>blah blahblah blahblah blahblah blahblah blahblah blah</div>
+                    </div>
+                    <div className='item'>
+                        <div className='question'>blah blah blah blah blah blah? blah blahblah blahblah blahblah blah ?</div>
+                        <div className='answer'>blah blahblah blahblah blahblah blahblah blahblah blah</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className='container'>
+                <div className='footer'>
+                    <p>TODO: This is for other things: fuding, sending contacts, sending requests when encounter web issues</p>
                 </div>
             </div>
         </span>
