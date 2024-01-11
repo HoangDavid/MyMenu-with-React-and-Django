@@ -3,20 +3,22 @@ import React, { useState, useEffect} from 'react'
 
 function Home(){
     const [slideIndex, setIndex] = useState(1)
-    const [curSlide, setSlide] = useState(require(`./images/slides/${slideIndex}.gif`))
 
     // TODO: call api for the number of slides
-    const length = 6
+    const length = 2
+    var slides = {}
+    for (let i = 1; i <= length; i++){
+        slides[i] = require(`./images/slides/${i}.gif`)
+    }
 
     const nextSlide = () => {
-        if (slideIndex + 1  > length){
-            alert("end of slide")
-        }
-        else{
+        if (slideIndex >= length){
+            setIndex(1)
+        }else{
             setIndex(slideIndex + 1)
-            setSlide(require(`./images/slides/${slideIndex}.jpg`))
         }
     }
+
 
 
     return (
@@ -49,7 +51,25 @@ function Home(){
                         <button>Try it out !</button>
                     </div>
                     <div className='slide-item'>
-                        <img src={curSlide} onClick={nextSlide}/>
+                        <img src={slides[slideIndex]} onClick={nextSlide}/>
+                    </div>
+                </div>
+            </div>
+
+            <div className='container'>
+                <div className='gallery'>
+                    <h2>Menu templates</h2>
+                    <div className='item'>
+                        <div className='display' id="display1"></div>
+                        <div className='caption'>A la carte</div>
+                    </div>
+                    <div className='item'>
+                        <div className='display' id="display2"></div>
+                        <div className='caption'>Seasonal</div>
+                    </div>
+                    <div className='item'>
+                        <div className='display' id="display3"></div>
+                        <div className='caption'>Charming</div>
                     </div>
                 </div>
             </div>
