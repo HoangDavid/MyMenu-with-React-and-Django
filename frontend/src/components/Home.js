@@ -1,5 +1,6 @@
-import './Home.css'
+import './style.css'
 import React, { useState, useEffect} from 'react'
+import { Header, Footer } from './layout'
 
 function Home(){
     const [slideIndex, setIndex] = useState(1)
@@ -8,7 +9,7 @@ function Home(){
     const length = 2
     var slides = {}
     for (let i = 1; i <= length; i++){
-        slides[i] = require(`./images/slides/${i}.gif`)
+        slides[i] = require(`../images/slides/${i}.gif`)
     }
 
     const nextSlide = () => {
@@ -19,25 +20,9 @@ function Home(){
         }
     }
 
-
-    
     return (
         <span>
-            <div className="container">
-                <div className="header">
-                    <div className="item"><i className="logo"></i></div>
-                    <div className="item">Community</div>
-                    <div className="item">Make your own</div>
-                    <div className="item">FAQ</div>
-                    <div className="item">
-                        <i className="search-icon"></i>
-                        <input id="search" type="text" placeholder="search for templates"></input>
-                    </div>
-                    <div className="item"><i className="profile"></i></div>
-                </div>
-            </div>
-
-            
+            < Header/>
             <div className="container">
                 <div className='slider'>
                     <div className='slide-item'>
@@ -99,12 +84,8 @@ function Home(){
                     </div>
                 </div>
             </div>
-            
-            <div className='container'>
-                <div className='footer'>
-                    <p>TODO: This is for other things: fuding, sending contacts, sending requests when encounter web issues</p>
-                </div>
-            </div>
+
+            <Footer />
         </span>
     )
 }
